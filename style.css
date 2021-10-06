@@ -157,7 +157,7 @@ header ul li a {
   background: linear-gradient(to left, transparent, #fff, transparent);
 }
 .sec2 {
-  padding: 100px 0 0;
+  padding: 100px 0 0 0;
 }
 .sec2 h2 {
   text-transform: uppercase;
@@ -169,7 +169,7 @@ header ul li a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .sec2-inner .img {
   width: auto;
@@ -181,5 +181,26 @@ header ul li a {
 }
 .sec2 .text-inner {
   position: relative;
-  margin: 55px 0 0 100px;
+  margin: 55px 0 0 190px;
+}
+.sec2 .text-inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 8px;
+  left: -30px;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, #fff);
+}
+.left-right-sec:nth-child(even) .text {
+  margin-right: -65px;
+  text-align: right;
+}
+.left-right-sec:nth-child(even) .text-inner {
+  margin: 55px 190px 0 0;
+}
+.left-right-sec:nth-child(even) .text-inner:before {
+  left: inherit;
+  right: -30px;
 }
